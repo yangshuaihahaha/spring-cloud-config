@@ -1,0 +1,62 @@
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      totoro:
+        url: jdbc:mysql://10.19.196.183:3306/longmao-system?tinyInt1isBit=false&useUnicode=true&characterEncoding=utf-8&useCursorFetch=true&defaultFetchSize=200
+        username: root
+        password: 123456
+        driver-class-name: com.mysql.jdbc.Driver
+        minIdle: 3
+        maxActive: 20
+        initialSize: 5
+        timeBetweenEvictionRunsMillis: 3000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT 1
+        validationQueryTimeout: 10000
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        maxWait: 60000
+        filters: stat
+      tags:
+        url: jdbc:mysql://10.19.196.183:3306/longmao-tags?tinyInt1isBit=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useCursorFetch=true&defaultFetchSize=200
+        username: root
+        password: 123456
+        driver-class-name: com.mysql.jdbc.Driver
+        minIdle: 3
+        maxActive: 30
+        initialSize: 5
+        timeBetweenEvictionRunsMillis: 3000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT 1
+        validationQueryTimeout: 10000
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        maxWait: 60000
+        filters: stat
+      validate:
+        url: jdbc:mysql://10.19.196.183:3306/longmao-validate?tinyInt1isBit=false&useUnicode=true&characterEncoding=utf-8&useCursorFetch=true&defaultFetchSize=200
+        username: root
+        password: 123456
+        driver-class-name: com.mysql.jdbc.Driver
+        minIdle: 3
+        maxActive: 20
+        initialSize: 5
+        timeBetweenEvictionRunsMillis: 3000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT 1
+        validationQueryTimeout: 10000
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        maxWait: 60000
+        filters: stat
+
+pagehelper:
+  helperDialect: mysql
+  pageSizeZero: false
+  reasonable: false
+  params: 'pageNum=pageNum;pageSize=pageSize;count=countSql;reasonable=reasonable;pageSizeZero=pageSizeZero'

@@ -1,0 +1,31 @@
+
+spring:
+#  autoconfigure:
+#    # TODO: remove when fixed https://github.com/spring-projects/spring-security/issues/6314
+#    exclude: org.springframework.boot.actuate.autoconfigure.security.reactive.ReactiveManagementWebSecurityAutoConfiguration
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/v1/api]':
+            allowedOrigins: "http://*.longmaosoft.com"
+            allowedMethods:
+              - GET
+              - POST
+              - OPTIONS
+      routes:
+        - id: api-server
+          uri: 'lb://group-service-system'
+          predicates:
+          - Path=/{version}/{type}/{safe}/{group}/{system}/**
+
+longmao:
+  redis:
+    session:
+      enable: true
+  request:
+    logs:
+      enable: false
+
+logging:
+  path: /data/logs

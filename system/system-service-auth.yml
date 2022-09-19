@@ -1,0 +1,9 @@
+
+swagger:
+  title: '权限认证服务'
+  description: '用户登录相关接口'
+
+longmao:
+  redis:
+    session:
+      enable: true

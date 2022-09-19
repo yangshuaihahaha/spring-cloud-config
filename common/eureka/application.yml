@@ -1,0 +1,8 @@
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_CLIENT_ZONE:http://127.0.0.1:80/eureka/}
+  instance:
+    preferIpAddress: true
+    instance-id: ${spring.cloud.client.ip-address}:${SPRINGBOOT_APP_VERSION}

@@ -1,0 +1,5 @@
+
+longmao:
+  redis:
+    session:
+      enable: true

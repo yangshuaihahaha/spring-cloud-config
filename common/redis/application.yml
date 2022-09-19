@@ -1,0 +1,50 @@
+longmao:
+  redis:
+    lettuce:
+      pool:
+        maxTotal: 50
+        minIdle: 1
+        maxIdle: 5
+        maxWaitMillis: 5000
+        testOnBorrow: true
+        testOnReturn: true
+        testWhileIdle: true
+    other:
+      db10: 0
+      db11: 0
+      db12: 0
+      db1: 0
+      db3: 0
+      db4: 0
+
+    totoro:
+      database: 0
+      hostName: 10.19.196.183
+      port: 6379
+      password: "123456"
+      timeout: 5000
+    system:
+      enable: true
+      database: 0
+      hostName: 10.19.196.183
+      port: 6379
+      password: "123456"
+      timeout: 5000
+    session:
+      database: 0
+      hostName: 10.19.196.183
+      port: 6379
+      password: "123456"
+      timeout: 5000
+    tags:
+      database: 0
+      hostName: 10.19.196.183
+      port: 6379
+      password: "123456"
+      timeout: 5000
+    pay:
+      database: 0
+      hostName: 10.19.196.183
+      port: 6379
+      password: "123456"
+      timeout: 5000

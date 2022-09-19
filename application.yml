@@ -1,0 +1,37 @@
+info:
+  description: Longmao
+  url: http://gitlab.shandianshua.com/springcloud/spring-cloud-config.git
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    shutdown:
+      enabled: true  #服务优雅下线
+
+spring:
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+  servlet:
+      multipart:
+        max-file-size: 10MB
+        max-request-size: 50MB
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 60000
+        readTimeout: 60000
+        loggerLevel: basic
+
+longmao:
+  api:
+    inside: http://api.inside.longmaosoft.com
+    k8s-namespace: longmao
+    locgateway-name: offline-v2-server-locgateway-1
+    locgateway-domain: http://offline-v2-server-locgateway-1%s
+    locgateway-url: http://offline-v2-server-locgateway-1

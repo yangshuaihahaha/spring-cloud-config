@@ -1,0 +1,22 @@
+
+## https://github.com/xiongben-tongxue/rocketmq-externals/blob/master/rocketmq-spring-boot-starter/README_zh_CN.md
+
+############# 发送相关配置
+#  spring.rocketmq.producer.group=my-group
+#  spring.rocketmq.producer.retry-times-when-send-async-failed=0
+#  spring.rocketmq.producer.send-msg-timeout=300000
+#  spring.rocketmq.producer.compress-msg-body-over-howmuch=4096
+#  spring.rocketmq.producer.max-message-size=4194304
+#  spring.rocketmq.producer.retry-another-broker-when-not-store-ok=false
+#  spring.rocketmq.producer.retry-times-when-send-failed=2
+############# 接收相关配置
+
+rocketmq:
+  name-server: 10.19.196.183:9876
+  producer:
+    group: LPG_DEFAULT # 默认生产者组
+    send-message-timeout: 5000 # 发送超时时间(毫秒) 5秒
+    compress-message-body-threshold: 4096 # 消息body需要压缩的阀值 1024 * 4, 4k
+    retry-times-when-send-async-failed: 0 # 异步发送失败的话，rocketmq内部重试多少次
+    retry-next-server: true
+    retry-times-when-send-failed: 2  #同步发送失败的话，rocketmq内部重试多少次

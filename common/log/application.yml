@@ -1,0 +1,7 @@
+
+
+logging:
+  level:
+    root: INFO
+    org.apache.http.impl.execchain.RetryExec: WARN
+  path: /data/logs/${spring.application.name}/${spring.cloud.client.ip-address}

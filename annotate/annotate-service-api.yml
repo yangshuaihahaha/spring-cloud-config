@@ -1,0 +1,10 @@
+
+#配置好此文件之后，请COPY到配置中心仓库里面
+#配置仓库：http://gitlab.shandianshua.com/springcloud/gityml.git
+
+#注意，此文件名一定要保持不变
+#千万千万 不要用 不要用 不要用 不要用 application.yml或application.properties 命名
+
+swagger:
+  title: '标注公共模块'
+  description: '标注公共模块'
